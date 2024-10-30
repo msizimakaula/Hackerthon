@@ -590,6 +590,18 @@ a:focus {
   content: "\f106";
 }
 
+/* login */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2 {
+  text-align: left;
+}
+
+
 .about_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
