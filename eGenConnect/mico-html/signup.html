@@ -68,7 +68,6 @@
                     background-color: #0056b3;
                 }
 
-        /* Style all input fields */
         input {
             width: 100%;
             padding: 12px;
@@ -79,19 +78,16 @@
             margin-bottom: 16px;
         }
 
-            /* Style the submit button */
             input[type=submit] {
                 background-color: #04AA6D;
                 color: white;
             }
 
-        /* Style the container for inputs */
         .container {
             background-color: #f1f1f1;
             padding: 20px;
         }
 
-        /* The message box is shown when the user clicks on the password field */
         #message {
             display: none;
             background: #f1f1f1;
@@ -106,7 +102,6 @@
                 font-size: 18px;
             }
 
-        /* Add a green text color and a checkmark when the requirements are right */
         .valid {
             color: green;
         }
@@ -117,7 +112,6 @@
                 content: "✔";
             }
 
-        /* Add a red text color and an "x" when the requirements are wrong */
         .invalid {
             color: red;
         }
@@ -140,7 +134,7 @@
                 <input type="text" placeholder="Full name" required>
                 <input type="text" placeholder="ID Number" required>
                 <input type="text" placeholder="Address" required>
-                <input type="text" placeholder="Telephone" required>
+                <input type="text" placeholder="Contact Number" required>
                 <input type="email" placeholder="Email address" required>
                 <input type="password" placeholder="Enter Password" id="psw" name="psw"
                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain
@@ -177,42 +171,51 @@
         }
 
         // When the user starts to type something inside the password field
-        myInput.onkeyup = function () {
-            // Validate lowercase letters
+        myInput.onkeyup = function () 
+        {
+            // lowercase letters
             var lowerCaseLetters = /[a-z]/g;
-            if (myInput.value.match(lowerCaseLetters)) {
+            if (myInput.value.match(lowerCaseLetters)) 
+            {
                 letter.classList.remove("invalid");
                 letter.classList.add("valid");
-            } else {
+            } else 
+            {
                 letter.classList.remove("valid");
                 letter.classList.add("invalid");
             }
 
-            // Validate capital letters
+            // capital letters
             var upperCaseLetters = /[A-Z]/g;
-            if (myInput.value.match(upperCaseLetters)) {
+            if (myInput.value.match(upperCaseLetters)) 
+            {
                 capital.classList.remove("invalid");
                 capital.classList.add("valid");
-            } else {
+            } else 
+            {
                 capital.classList.remove("valid");
                 capital.classList.add("invalid");
             }
 
-            // Validate numbers
+            // numbers
             var numbers = /[0-9]/g;
-            if (myInput.value.match(numbers)) {
+            if (myInput.value.match(numbers)) 
+            {
                 number.classList.remove("invalid");
                 number.classList.add("valid");
-            } else {
+            } else 
+            {
                 number.classList.remove("valid");
                 number.classList.add("invalid");
             }
 
-            // Validate length
-            if (myInput.value.length >= 8) {
+            // length
+            if (myInput.value.length >= 8) 
+            {
                 length.classList.remove("invalid");
                 length.classList.add("valid");
-            } else {
+            } else 
+            {
                 length.classList.remove("valid");
                 length.classList.add("invalid");
             }
